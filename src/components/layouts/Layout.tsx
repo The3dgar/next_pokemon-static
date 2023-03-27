@@ -7,6 +7,8 @@ interface Props {
   title?: string;
 }
 
+const origin = typeof window === 'undefined' ? '' : window.location.origin;
+
 export const Layout = ({ children, title }: Props) => {
   return (
     <>
@@ -19,6 +21,13 @@ export const Layout = ({ children, title }: Props) => {
         />
         <meta name='keywords' content={`${title}, pokemon, pokedex`} />
         <link rel='icon' href='/favicon.ico' />
+
+        <meta property='og:title' content={`Informacion sobre ${title}`} />
+        <meta
+          property='og:description'
+          content={`Esta es la pagina sobre ${title}`}
+        />
+        <meta property='og:image' content={`${origin}/banner.png`} />
       </Head>
 
       <Navbar />
