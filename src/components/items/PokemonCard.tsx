@@ -11,7 +11,7 @@ export const PokemonCard = ({ pokemon }: Props) => {
   const { id, img, name, url } = pokemon;
   const router = useRouter();
   const onClick = async () => {
-    router.push(`/pokemon/${id}`);
+    router.push(`/name/${name}`);
   };
   return (
     <Grid key={id} xs={6} sm={3} md={2} xl={1}>

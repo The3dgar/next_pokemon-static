@@ -39,7 +39,8 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   //https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg
 
   const pokemons: PokemonResult[] = data.results.map((p, i) => ({
-    ...p,
+    name: p.name,
+    url: p.url,
     id: i + 1,
     img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${
       i + 1
