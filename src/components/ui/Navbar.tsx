@@ -1,4 +1,3 @@
-
 import { Spacer, Text, useTheme, Link } from '@nextui-org/react';
 import Image from 'next/image';
 import React from 'react';
@@ -35,7 +34,9 @@ export const Navbar = () => {
 
       <Spacer css={{ flex: 1 }} />
       <Link href='/favorites'>
-        <Text color='white'>favoritos</Text>
+        <Text color='white' weight={'bold'}>
+          Favoritos
+        </Text>
       </Link>
     </div>
   );
